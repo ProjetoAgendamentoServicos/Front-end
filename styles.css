@@ -1,0 +1,90 @@
+
+.logo1 {
+    width: 322px;
+    height: 120px;
+}
+
+.logo img {
+    height: 336px;
+}
+
+body {
+    background-color: #d0322f;
+    font-family: Arial, sans-serif;
+    max-height: 100%;
+    max-width: 100vw;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #000;
+}
+
+h2 {
+    color: #d0322f;
+    size: 40px;
+
+}
+
+.container {
+    background-color: #D9D9D9;
+    padding: 30px;
+    border-radius: 10px;
+    width: 426px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.form {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 323px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    opacity: 0px;
+
+}
+
+legend {
+    font-weight: bold
+}
+
+button {
+    background-color: #AF0C09;
+    color: #fff;
+    width: 175px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.imagem img {
+    width: 593px;
+    height: 636px;
+    top: 72px;
+    left: 567px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+header {
+    max-width: 200px; 
+    max-height: 150px
+}
+
+

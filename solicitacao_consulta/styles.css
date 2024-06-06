@@ -1,0 +1,176 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    display: flex;
+}
+
+.side-menu {
+    background-color: #d32f2f;
+    width: 90px;
+    height: 100vh;
+    display: flex;
+    justify-content: top;
+    align-items: top;
+    position: fixed;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+}
+
+.side-menu .logo {
+    max-width: 90px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.container {
+    margin-left: 80px;
+    padding: 20px;
+    width: calc(100% - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.content {
+    padding: 20px;
+    width: 90%;
+    max-width: 1600px;
+    border-radius: 8px;
+    flex-direction: column;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+ 
+}
+
+h2, p{
+    color: rgba(89, 89, 89, 1);
+    font-weight: bold;
+}
+
+.options {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.option:hover {
+    transform: scale(1.05);
+}
+
+.option .option-content {
+    background-color: #ccc;
+    border-radius: 10px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.option:hover .option-content {
+    background-color: red;
+}
+
+.option img {
+    max-width: 200px;
+    margin-bottom: 10px;
+    align-items: center;    
+}
+
+.option p {
+    font-size: 1.4em;
+}
+
+.description {
+    margin-top: 30px;
+}
+
+textarea {
+    width: 100%;
+    max-width: 1000px;
+    height: 200px;
+    padding: 15px;
+    margin-top: 10px;
+    font-size: 1.4em;
+}
+
+.submit {
+    background-color: #d32f2f;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1em;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.submit:hover {
+    background-color: #b71c1c;
+}
+
+@media (max-width: 768px) {
+    .options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .option {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .option img {
+        max-width: 50px;
+    }
+
+    .option p {
+        margin: 0;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .submit {
+        width: 100%;
+        padding: 15px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 10px;
+    }
+
+    .submit {
+        width: 100%;
+        padding: 15px 0;
+    }
+}

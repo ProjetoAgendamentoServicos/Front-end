@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Paciente</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body> 
+    <main> 
+        <div class="left-component">
+            <img src="LOGO UNICONSULTA.png" alt="Logo Uni" class="logo1">
+            <div class="container">
+                <h2>Marque sua consulta</h2>
+                <form id="cadastroForm">
+                    <legend>Nome completo do paciente</legend>
+                    <div>
+                        <label for="nome"></label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <legend>Whatsapp</legend>
+                    <div>
+                        <label for="whatsapp"></label>
+                        <input type="tel" id="whatsapp" name="whatsapp" required />
+                    </div>
+                    <legend>Data de nascimento</legend>
+                    <div>
+                        <label for="data-nascimento"></label>
+                        <input type="date" id="data-nascimento" name="data-nascimento" required>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+        <div>
+            <div class="image-container">
+                <img id="doctors-img" src="Doctors-bro 1.png" alt="imagem médicos">
+                <div id="adm-button">
+                    <img src="adm-img.png" alt="adm">
+                    <span class="admin-text">Administração</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('cadastroForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const dataNascimento = document.getElementById('data-nascimento').value;
+
+            const paciente = {
+                name: String(nome),
+                whatsapp: String(whatsapp),
+                dateOfBirth: String(dataNascimento)
+            };
+
+            fetch('http://localhost:8080/people', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(paciente)
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Paciente cadastrado com sucesso!');
+                console.log('Success:', data);
+            })
+            .catch(error => {
+                alert('Erro ao cadastrar paciente.');
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>

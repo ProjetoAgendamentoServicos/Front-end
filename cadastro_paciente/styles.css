@@ -1,0 +1,133 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo1 {
+    width: 322px;
+    height: 120px;
+}
+
+.logo img {
+    height: 336px;
+}
+
+body {
+    background-color: #d0322f;
+    font-family: Arial, sans-serif;
+    max-height: 100%;
+    max-width: 100vw;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #000;
+}
+
+h2 {
+    color: #d0322f;
+    size: 40px;
+}
+
+.container {
+    background-color: #D9D9D9;
+    padding: 30px;
+    border-radius: 10px;
+    width: 426px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.left-component {
+    flex-direction: column;
+}
+
+.form {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 323px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    opacity: 0px;
+}
+
+legend {
+    padding-top: 15px;
+    font-weight: bold;
+}
+
+button {
+    background-color: #AF0C09;
+    color: #fff;
+    width: 175px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.imagem {
+    flex-direction: column;
+    display: flex;
+}
+
+#doctors-img {
+    width: 100%;
+    height: 90vh;
+}
+
+#adm-button {
+    position: absolute;
+    right: 1px;
+    top: 10px;
+    width: 110px;
+    height: 50px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.image-container {
+    position: relative;
+}
+
+span {
+    font-weight: 600;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+ #doctors-img{
+    display: none;
+ }
+ .image-container{
+    position: absolute;
+    right: 5px;
+    top: 1px;
+    width: 110px;
+    height: 40px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+ }
+}
